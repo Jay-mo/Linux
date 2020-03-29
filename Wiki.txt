@@ -58,12 +58,19 @@ sudo service --status-all
 
 apt list installed | grep isc
 dpkg -l
+dpkg-query -l
 
 
 #How to list ports to see if dhcp server is listening on port 67
 netstat -alnp | grep 67
 
-
+Resources 
+systemd
+https://askubuntu.com/questions/795226/how-to-list-all-enabled-services-from-systemctl
+https://www.linuxquestions.org/questions/linux-networking-3/how-do-i-check-to-see-if-dhcpd-is-running-730409/
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/s1-dhcp-configuring-server
+https://wiki.debian.org/DHCP_Server
+https://www.tecmint.com/install-dhcp-server-client-on-centos-ubuntu/
 
 -----------------------------------------------------------------------------------
 #On MX
