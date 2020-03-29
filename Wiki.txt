@@ -1,0 +1,79 @@
+#DHCP Server Project Wiki
+
+
+#How to install dhcp server on linux
+
+module name - isc-dhcp-server(there are other packages out there that can also do the same thing. I chose to go with this. Another is dnsmasq)
+
+apt-get install isc-dhcp-server
+
+
+#configure /etc/default/isc-dhcp-server
+# here you give an interface that the dhcp server will be listening on to for DHCP requests
+
+sudo nano /etc/default/isc-dhcp-server
+
+INTERFACESv4="eth0"
+
+
+#configure /etc/dhcp/dhcpd.conf
+#this involves the creation of an actual subnet pool that the server will use to hand out addresses
+
+subnet 192.168.128.0 netmask 255.255.255.0 {
+  range 192.168.128.100 192.168.128.150;
+  option routers 192.168.128.1;
+  option domain-name-servers 1.1.1.1, 8.8.8.8;
+}
+
+#enable isc-dhcp-server
+
+sudo systemctl start isc-dhcp-server
+sudo systemctl enable isc-dhcp-server # this is to ensure that dhcp starts when the server reboots
+
+
+#To fix issue with isc-server not starting on bootup with systemd
+#it seems that isc-server is not recognised by system as a valid unit file or server.
+#at this time my limited linux knowledge does not permit me to fully understand why. 
+# But below is the required work around.
+
+#configure /etc/systemd/system/isc-dhcp-server.service.d/retry.conf with the ff 
+
+sudo nano /etc/systemd/system/isc-dhcp-server.service.d/retry.conf
+
+[Service]
+Restart=on-failure
+RestartSec=15
+
+Extras
+
+
+#systemctl commands
+#these commands will show you all the process that are running on your server
+sudo systemctl status
+sudo service --status-all
+
+
+#How to check all installed packages
+#to be sure that isc-server has been installed
+
+apt list installed | grep isc
+dpkg -l
+
+
+#How to list ports to see if dhcp server is listening on port 67
+netstat -alnp | grep 67
+
+
+
+-----------------------------------------------------------------------------------
+#On MX
+
+/storage/dhcpd.leases
+
+/etc/dhcpd.conf
+
+/var/log/dhcpd.log
+
+
+
+

@@ -1,0 +1,10 @@
+Build a KVM-QEMU Hypervisor
+Build a DHCP server on a fresh VM using your KVM-QEMU hypervisor, and do it using ONLY command-line tools.
+Build a DNS server in the same fashion as above.
+Build a firewall/router
+Build a file server and configure it to work with SFTP
+Build a Wiki to document all of your previous and future builds
+Configure a DMZ using your firewall/router and move your Wiki to it
+Build a network IDS/IPS using Snort
+Build a monitoring server using Nagios 4
+Build a centralized log server using Elastic Search, Logstash, and Kibana
