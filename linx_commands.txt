@@ -1,0 +1,83 @@
+xargs takes standard input from command line and then carries out an action on it.
+It will carry out an operation on every argument separated by space or nex line.
+
+eg.
+#create 3 files
+echo "file1 file2 file3 " | xargs touch
+
+
+
+# remove files that were created
+find . -name 'file*' | xargs rm
+
+#
+
+
+Find command
+
+#to search all files and folders in current directory
+
+find .
+
+#to find all files and folders in /var/log
+find /var/log
+
+
+#to find all directories in /var/log
+
+find /var/log -type d
+
+#to find all files in /var/log
+
+find /var/log -type f
+
+#to find all files in /var/log with access in the name
+
+find /var/log -type f -name '*access*'
+
+#ro find all files in /var/log with access in the name but case insensitive
+
+find /var/log -type f -iname '*access*'
+
+
+#to find all log files in /var/log that have been modified in the last 5 mins
+
+find /var/log -type f -name "*.log" -mmin -5
+
+# to tail all log files in /var/log that have been modified in the last 5 mins and show last 10 lines
+
+find /var/log -type f -name "*.log" -mmin -5 | xargs tail 
+
+-mmin modified minutes -5 (less than 5 minutes ) + 5 (more than 5 minutes)
+-mtime modified days - 5 (less than 5 days ) + 5 (more than 5 days)
+
+-amin 
+-atime
+
+cmin
+ctime 
+
+# find files based on size
+
+find . -size +5M
+
+k - kilobytes
+G - gigabytes
+
+#find empty files
+
+find . -empty 
+
+#find files based on permission
+
+find . -perm 777
+
+
+# find all files and folders in a directory and then change user and group 
+
+find /var/log  -exec chown john:onumah {} + 
+
+find /var/log | xargs chown john:onumah 
+
+
+# 
