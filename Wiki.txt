@@ -71,6 +71,10 @@ https://www.linuxquestions.org/questions/linux-networking-3/how-do-i-check-to-se
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/s1-dhcp-configuring-server
 https://wiki.debian.org/DHCP_Server
 https://www.tecmint.com/install-dhcp-server-client-on-centos-ubuntu/
+https://wiki.archlinux.org/index.php/Dhcpd
+https://wiki.archlinux.org/index.php/Network_configuration#Static_IP_address
+http://www.thekelleys.org.uk/dnsmasq/doc.html
+
 
 -----------------------------------------------------------------------------------
 #On MX

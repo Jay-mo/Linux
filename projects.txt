@@ -11,3 +11,55 @@ Build a centralized log server using Elastic Search, Logstash, and Kibana
 
 
 https://www.linuxtrainingacademy.com/linux-projects/
+
+
+Coding 
+
+did prefixed matching for IP addresses
+
+regular expression
+
+access api using python
+
+Basic leetcode questions
+
+Given a string with words separated by string, return word that occurred most frequently. Explain big O runtime of solution.
+
+Same as above, but return a list of most frequent words. Just implement a working solution, no need to optimize.
+
+Given phrase (list), and string, find all occurrences of phrase in string. Example: given phrase [a,a] and string "a a a a a", return 4.
+
+Given a string of words, return the word with maximum frequency of occurrence
+
+Given a sentence and a phrase, return the index of its first occurrence
+
+Convert an IP address eg. 192.168.1.2 to 32 bit binary
+
+Return if an IP address belongs to a subnet range (no prior networking knowledge required)
+
+Given an array of ranges, find overlapping arrays and merge them.
+
+Implementing a linked list to hold a certain type of data
+
+Printing all combinations from an input that fit a certain criteria
+
+Given an array, output the values that are a power of 2.
+Another question about sockets, but didn't need to have any past knowledge on it
+
+Given a string, return an word or words repeated the most.
+
+Write a method to find the the nth number in the fibonnacci sequence.
+
+Write a method to find the nth prime number.
+
+Dutch national flag problem. Input an array of integers. Output: rearrange the integers in place such that odd integers appear before even integers.
+
+Implementation of a Queue Data structure [with locks used for protecting the shared queue data structure].
+
+What do you know about the company?
+What is your background?
+What would you like to do?
+
+The guy I spoke to also asked me about my extracurricular activities and extensively about past projects that I've worked on at other companies. Also, he asked if I'd done any side projects on my own.
+
+Typical behavioral questions about what you like to do.
