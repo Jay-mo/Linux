@@ -80,4 +80,9 @@ find /var/log  -exec chown john:onumah {} +
 find /var/log | xargs chown john:onumah 
 
 
-# 
+# use grep on the output of dig to find CNAME and its value
+
+dig n2.meraki.com | grep 'CNAME\s*[a-zA-Z0-9.]*'
+
+#from the output of the command above, get the value of the CNAME
+dig n2.meraki.com | grep 'CNAME\s*[a-zA-Z0-9.]*' | cut -f 6
